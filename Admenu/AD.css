@@ -1,0 +1,10 @@
+#grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#grid #menu{
+    margin-bottom: 20px;
+}
+li{
+    margin-bottom: 10px;
+}

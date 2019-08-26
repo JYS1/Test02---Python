@@ -4,7 +4,7 @@ import codecs # 한글 출력하기 위해서
 sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 print("Content-Type: text/html;charset=utf-8\r\n")
 
-
+import os
 
 print('''
 <!DOCTYPE html>
@@ -16,9 +16,8 @@ print('''
     <body>
         <h1>메뉴 등록</h1>
         <form action="save_menu.py" method="post">
-            <p><input type="text" name="title" placeholder="커피 이름"></p>
+            <p><input type="file" name="title"></p>
             <p><input type="int" name="price" placeholder="가격">
-            <p><input type="file" name="photo"></p>
             <p><input type="submit"></p>
         </form>
             <input type="button" value="이전" onclick="location.href='../Admenu.py'">

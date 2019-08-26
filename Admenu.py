@@ -17,8 +17,7 @@ print('''
         <h1>관리자 메뉴</h1>
         <div id="adbutton_button">
             <input type="button" value="메뉴 추가" onclick="location.href='Admenu/menu_add.py'">
-            <input type="button" value="메뉴 삭제" onclick="location.href='Admenu/menu_delete.py'">
-            <input type="button" value="메뉴 수정" onclick="location.href='Admenu/menu.py'">
+            <input type="button" value="메뉴 수정 및 삭제" onclick="location.href='Admenu/menu_delete.py'">
             <input type="button" value="이전" onclick="location.href='home.py'" style="
                 padding-right:15px;
                 padding-left:15px;
