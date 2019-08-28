@@ -25,6 +25,7 @@ else:
     price = '삭제 할 메뉴를 선택해 주세요'
     update_link=''
     delete_action=''
+
 print('''
 <!DOCTYPE html>
 <html>
@@ -40,7 +41,7 @@ print('''
             {listStr}
         </ul>
         <div id="menu">
-                <p>{desc}</p>
+                <p>메뉴 가격: {desc}</p>
                 <p>{update_link}</p>
                 <p>{delete_action}</p>
                 <input type="button" value="이전" onclick="location.href='../Admenu.py'">
@@ -50,6 +51,7 @@ print('''
             <img src="coffee_image/{title}.jpg" width=100%
             style="margin-top:10px;">
         </div>
+
     </div>
     </body>
 </html>

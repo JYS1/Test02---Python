@@ -1,0 +1,19 @@
+#grid{
+    display: grid;
+    grid-template-columns: 200px 300px 300px 1fr;
+}
+#grid #text{
+    margin-top: 140px;
+    margin-left: 111px;
+    width: 300px;
+}
+li{
+    margin-bottom: 10px;
+}
+ul{
+    padding-left: 20px;
+}
+#grid #money{
+    margin-top: 140px;
+    margin-left: 80px;
+}

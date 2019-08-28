@@ -18,7 +18,7 @@ print('''
         <form action="save_menu.py" method="post">
             <p><input type="file" name="title"></p>
             <p><input type="int" name="price" placeholder="가격">
-            <p><input type="submit"></p>
+            <p><input type="submit" value="등록"></p>
         </form>
             <input type="button" value="이전" onclick="location.href='../Admenu.py'">
     </body>

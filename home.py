@@ -15,7 +15,7 @@ print('''
     <body>
         <h1>선택 메뉴</h1>
         <div id="home_button">
-            <input type="button" value="주문" onclick="location.href='order.py'" style="
+            <input type="button" value="주문" onclick="location.href='Admenu/order.py'" style="
                 padding-right:23px;
                 padding-left:23px;
             ">
