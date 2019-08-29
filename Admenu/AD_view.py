@@ -6,5 +6,5 @@ def getList():
     listStr = ''
     for item in files:
         item = sanitizer.sanitize(item)
-        listStr = listStr + '<li><a href="menu_delete.py?id={name}">{name}</a></li>'.format(name=item)
+        listStr = listStr + '<li><a href="AD_menu_delete.py?id={name}">{name}</a></li>'.format(name=item)
     return listStr

@@ -4,7 +4,7 @@ import codecs # 한글 출력하기 위해서
 sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 
 print("Content-Type: text/html;charset=utf-8\r\n")
-import cgi, os, view
+import cgi, os, AD_view
 
 form = cgi.FieldStorage()
 if 'id' in form:
@@ -36,5 +36,5 @@ print('''
     </body>
 </html>
 '''.format(title=title,
-    listStr=view.getList(),
+    listStr=AD_view.getList(),
     desc=price,form_default_title=pageId , form_default_price=price))

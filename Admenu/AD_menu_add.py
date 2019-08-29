@@ -15,7 +15,7 @@ print('''
     </head>
     <body>
         <h1>메뉴 등록</h1>
-        <form action="save_menu.py" method="post">
+        <form action="AD_save_menu.py" method="post">
             <p><input type="file" name="title"></p>
             <p><input type="int" name="price" placeholder="가격">
             <p><input type="submit" value="등록"></p>

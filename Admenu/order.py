@@ -39,16 +39,39 @@ print('''
             </ul>
                 <img src="coffee_image/{title}.jpg">
             <div id="text">
-                가격 : {price}
-            </div>
-            <div id="money">
-                {count_money}
+                가격 : {price}<br>
+                추가  {count_money}
             </div>
         </div>
-        <input type="button" value="이전" onclick="location.href='../home.py'">
+        <input type="button" value="이전"  onclick="location.href='../home.py'">
     </body>
 </html>
 '''.format(title=title,
         price=price,
         listStr=menu_view.getList(),
         count_money=count_money))
+print('<br>')
+print('<br>')
+name = open('order_name', mode='r', encoding='utf-8')
+money = open('order_money', mode='r', encoding='utf-8')
+
+name_split = name.read().split(',')
+money_split = money.read().split(',')
+
+name_len = len(name_split)
+money_len = len(money_split)
+print('<br>')
+w_count = {}
+for list in name_split:
+    try: w_count[list] += 1
+    except: w_count[list] =1
+print('주문 현황 : ', w_count)
+print('<br>')
+print('<br>')
+j = 0
+sum = 0
+while j < money_len:
+    sum = sum + (int(money_split[j]))
+    j = j + 1
+    if j == money_len-1:
+        print('총합계 : ',sum)

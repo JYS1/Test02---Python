@@ -4,7 +4,7 @@ import codecs # 한글 출력하기 위해서
 sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 
 print("Content-Type: text/html;charset=utf-8\r\n")
-import cgi, os, view ,html_sanitizer
+import cgi, os, AD_view ,html_sanitizer
 sanitizer = html_sanitizer.Sanitizer()
 
 form = cgi.FieldStorage()
@@ -13,7 +13,7 @@ if 'id' in form:
     price = open('menu/'+pageId, 'r', encoding='utf-8').read()
     title = sanitizer.sanitize(title)
     price = sanitizer.sanitize(price)
-    update_link = '<a href="update.py?id={}">수정</a>'.format(pageId)
+    update_link = '<a href="AD_update.py?id={}">수정</a>'.format(pageId)
     delete_action = '''
         <form action="process_delete.py" method="post">
             <input type="hidden" name="pageId" value={}>
@@ -56,7 +56,7 @@ print('''
     </body>
 </html>
 '''.format(title=title,
-    listStr=view.getList(),
+    listStr=AD_view.getList(),
     desc=price,
     update_link=update_link,
     delete_action=delete_action))

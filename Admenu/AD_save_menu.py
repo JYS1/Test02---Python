@@ -10,5 +10,5 @@ opened_file.write(price)
 opened_file.close()
 
 
-print("Location: menu_add.py")
+print("Location: AD_menu_add.py")
 print()
